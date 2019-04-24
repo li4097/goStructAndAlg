@@ -3,18 +3,19 @@ package main
 import (
 	"fmt"
 	"struct/structure"
+	"struct/utility"
 )
 
 func main() {
 
 	var b structure.BinaryTree
-	b.Insert(&MyData{5})
-	b.Insert(&MyData{2})
-	b.Insert(&MyData{3})
-	b.Insert(&MyData{9})
-	b.Insert(&MyData{6})
-	b.Insert(&MyData{7})
-	b.Insert(&MyData{1})
+	b.Insert(&utility.MyData{5})
+	b.Insert(&utility.MyData{2})
+	b.Insert(&utility.MyData{3})
+	b.Insert(&utility.MyData{9})
+	b.Insert(&utility.MyData{6})
+	b.Insert(&utility.MyData{7})
+	b.Insert(&utility.MyData{1})
 
 	b.TraversalFormat(structure.BinaryTreeFormat)
 	fmt.Println("\nL:")

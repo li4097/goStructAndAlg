@@ -218,7 +218,7 @@ func (self *BinaryTree) Delete(data Compare) error {
 	return nil
 }
 func BinaryTreeFormat(n *Node) {
-	if data, err := n.GetData().(*MyData); err == false {
+	if data, err := n.GetData().(*utility.MyData); err == false {
 		fmt.Println("data is not MyData")
 	} else {
 		strFormat := ""
@@ -227,13 +227,13 @@ func BinaryTreeFormat(n *Node) {
 			strFormat += "   "
 		}
 		strFormat += "|-"
-		fmt.Println(strFormat, data.data)
+		fmt.Println(strFormat, data.Data)
 	}
 }
 func BinaryTreePrint(n *Node) {
-	if data, err := n.GetData().(*MyData); err == false {
+	if data, err := n.GetData().(*utility.MyData); err == false {
 		fmt.Println("data is not MyData")
 	} else {
-		fmt.Print(data.data, ",")
+		fmt.Print(data.Data, ",")
 	}
 }

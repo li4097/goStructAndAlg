@@ -2,6 +2,7 @@ package structure
 
 import (
 	"errors"
+	"fmt"
 	"struct/utility"
 )
 
@@ -215,4 +216,24 @@ func (self *BinaryTree) Delete(data Compare) error {
 		}
 	}
 	return nil
+}
+func BinaryTreeFormat(n *Node) {
+	if data, err := n.GetData().(*MyData); err == false {
+		fmt.Println("data is not MyData")
+	} else {
+		strFormat := ""
+		var i uint8
+		for i = 0; i < n.GetLevel(); i++ {
+			strFormat += "   "
+		}
+		strFormat += "|-"
+		fmt.Println(strFormat, data.data)
+	}
+}
+func BinaryTreePrint(n *Node) {
+	if data, err := n.GetData().(*MyData); err == false {
+		fmt.Println("data is not MyData")
+	} else {
+		fmt.Print(data.data, ",")
+	}
 }
